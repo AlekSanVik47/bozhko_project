@@ -1,0 +1,32 @@
+server:
+  port: ${PORT_TO_EXPOSE:8081}
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework: INFO
+
+spring:
+  flyway:
+    enabled: false
+  application:
+    name: bozhko_project
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5434/postgres?currentSchema=postgres
+    username: postgres
+    password: postgres
+
+main:allow-circular-references:
+  #jpa.hibernate.ddl-auto: update
+  jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /v3/api-docs

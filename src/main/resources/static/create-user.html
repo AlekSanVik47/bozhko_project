@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Регистрация</title>
+    <style>
+
+        ul li {
+          list-style: none;
+        }
+        li {
+          text-align: right;
+          margin: 10px 0;
+        }
+        input {
+          width: 20%;
+          margin: 0 660px 0 5px;
+        }
+        h2 {
+          margin: 0 700px 0 100px;
+        }
+        form {
+          display: inline-block;
+          margin: -20px 0 0 -40px;
+        }
+
+    </style>
+</head>
+<body>
+<form method="POST" action="/create-user">
+    <ul>
+            <li><h2>Регистрация</h2></li>
+            <li>
+            <label>Имя:
+                <input type="text" name="name" placeholder="Введите имя..."  autofocus="true">
+            </label>
+        </li>
+        <li>
+            <label>Фамилия:
+                <input type="text" name="surname" placeholder="Введите фамилию...">
+            </label>
+        </li>
+        <li>
+            <label>Логин:
+                <input name="login" placeholder="Введите логин...">
+            </label>
+        </li>
+        <li>
+            <label>Пароль:
+                <input type="password" name="password" placeholder="Введите пароль...">
+            </label>
+        </li>
+        <li>
+            <label>Email:
+                <input type="email" name="email" placeholder="Введите email...">
+            </label>
+        </li>
+        <li>
+            <label>Телефон:
+                <input type="tel" name="phone" placeholder="Введите номер телефона...">
+            </label>
+        </li>
+        <li>
+            <input type="submit" value="Регистрация">
+        </li>
+
+    </ul>
+
+</form>
+
+</body>
+</html>
